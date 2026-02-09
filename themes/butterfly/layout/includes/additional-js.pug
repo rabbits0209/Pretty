@@ -1,0 +1,41 @@
+div
+  script(src=url_for(theme.asset.utils))
+  script(src=url_for(theme.asset.main))
+
+  if theme.fancybox
+    script(src=url_for(theme.asset.fancybox_v4))
+
+  if theme.instantpage
+    script(src=url_for(theme.asset.instantpage), type='module')
+
+  if theme.lazyload.enable
+    script(src=url_for(theme.asset.lazyload))
+
+  //- search
+  if theme.local_search.enable
+    script(src=url_for(theme.asset.local_search))
+
+  if theme.preloader
+    != partial("includes/loading/loading-js", {}, { cache: true })
+
+  .js-pjax
+    if needLoadCountJs
+      != partial("includes/third-party/card-post-count/index", {}, { cache: true })
+
+    if loadSubJs
+      include ./third-party/subtitle.pug
+
+    include ./third-party/math/index.pug
+
+    if commentsJsLoad
+      include ./third-party/comments/js.pug
+
+  != fragment_cache('injectBottom', function(){return injectHtml(theme.inject.bottom)})
+
+  != partial("includes/third-party/effect", {}, { cache: true })
+
+  if theme.pjax.enable
+    != partial("includes/third-party/pjax", {}, { cache: true })
+
+  if theme.busuanzi.site_uv || theme.busuanzi.site_pv || theme.busuanzi.page_pv
+    script(async data-pjax src='https://cdn.jsdmirror.com/ajax/libs/busuanzi/2.3.0/bsz.pure.mini.js')

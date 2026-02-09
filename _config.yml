@@ -1,0 +1,189 @@
+# Hexo Configuration
+## Docs: https://hexo.io/docs/configuration.html
+## Source: https://github.com/hexojs/hexo/
+
+# Site
+title: 兔兔博客🇨🇳
+subtitle:
+description: '万事都要全力以赴，包括开心'
+keywords: 'PHP,MySQL,算法,代码,博客,Butterfly,Hexo,BLOG🇨🇳,兔兔博客'
+author: 兔兔博客🇨🇳
+language: zh-CN
+timezone: ''
+
+# abbrlink config
+abbrlink:
+  alg: crc32
+  rep: hex
+
+# URL
+url: https://blog.xn--eet944d.top
+permalink: posts/:abbrlink.html
+permalink_defaults:
+pretty_urls:
+  trailing_index: true
+  trailing_html: true
+
+# Directory
+source_dir: source
+public_dir: public
+tag_dir: tags
+archive_dir: archives
+category_dir: categories
+code_dir: downloads/code
+i18n_dir: :lang
+skip_render:
+
+# Writing
+new_post_name: :year-:month-:day-:title.md
+default_layout: post
+titlecase: false
+external_link:
+  enable: true
+  field: site
+  exclude: ''
+filename_case: 0
+render_drafts: false
+post_asset_folder: false
+relative_link: false
+future: true
+highlight:
+  enable: true
+  line_number: true
+  auto_detect: true
+  tab_replace: ""
+  wrap: true
+  hljs: false
+prismjs:
+  enable: false
+  preprocess: true
+  line_number: true
+  tab_replace: ''
+
+math:
+  engine: 'mathjax'
+  mathjax:
+    src: custom_mathjax_source
+
+# Home page setting
+index_generator:
+  path: ''
+  per_page: 12
+  order_by: -date
+
+# Category & Tag
+default_category: uncategorized
+category_map:
+tag_map:
+
+# Metadata elements
+meta_generator: true
+
+# Date / Time format
+date_format: YYYY-MM-DD
+time_format: HH:mm:ss
+updated_option: 'mtime'
+
+# Pagination
+per_page: 10
+pagination_dir: page
+
+# Include / Exclude file(s)
+include:
+exclude:
+ignore:
+
+# Extensions
+theme: butterfly
+
+# Deployment
+deploy:
+  type: git
+  repository: 
+  branch: main
+
+# 首页轮播图 (hexo-butterfly-swiper)
+swiper:
+  enable: true
+  priority: 1
+  enable_page: /
+  timemode: date
+  layout:
+    type: id
+    name: recent-posts
+    index: 0
+  default_descr: 再怎么看我也不知道怎么描述它的啦！
+  swiper_css: https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiper.min.css
+  swiper_js: https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiper.min.js
+  custom_css: https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiperstyle.css
+  custom_js: https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiper_init.js
+
+# 本地搜索
+search:
+  path: search.xml
+  field: post
+  content: true
+
+# RSS订阅
+plugin:
+  - hexo-generator-feed
+feed:
+  type: atom
+  path: atom.xml
+  limit: 20
+
+# 站点地图
+sitemap:
+  path: sitemap.xml
+baidusitemap:
+  path: baidusitemap.xml
+
+nofollow:
+  enable: false
+  field: site
+  exclude: ''
+
+# 追番/追剧设置
+bangumi:
+  enable: true
+  source: bili
+  bgmInfoSource: 'bgmv0'
+  path:
+  vmid: 1129280784
+  title: '追番列表'
+  quote: '生命不息，追番不止！'
+  show: 1
+  lazyload: false
+  srcValue: '__image__'
+  lazyloadAttrName: 'data-src=__image__'
+  loading:
+  showMyComment: false
+  pagination: false
+  metaColor:
+  color:
+  webp:
+  progress:
+  progressBar:
+  extraOrder:
+  order: latest
+  coverMirror:
+
+cinema:
+  enable: true
+  path:
+  vmid:
+  title: '追剧列表'
+  quote: '生命不息，追剧不止！'
+  show: 1
+  lazyload: true
+  srcValue: '__image__'
+  lazyloadAttrName: 'data-src=__image__'
+  loading:
+  metaColor:
+  color:
+  webp:
+  progress:
+  progressBar:
+  extraOrder:
+  order:
+  coverMirror:

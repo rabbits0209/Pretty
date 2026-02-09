@@ -1,0 +1,36 @@
+mixin renderIcon(iconStr, animaStr)
+  - var icon = trim(iconStr)
+  - var anima = animaStr ? trim(animaStr) : 'faa-tada'
+  if icon.substring(0,2) === "fa"
+    i.fa-fw(class=icon + ' ' + anima)
+  else if icon.substring(0,4) === "icon"
+    svg.menu_icon(aria-hidden="true" class=anima)
+      use(xlink:href='#' + icon)
+
+if theme.menu
+  .menus_items
+    each value, label in theme.menu
+      if typeof value !== 'object'
+        .menus_item
+          - const valueArray = value.split('||')
+          a.site-page.faa-parent.animated-hover(href=url_for(trim(valueArray[0])))
+            if valueArray[1]
+              +renderIcon(valueArray[1], valueArray[2])
+            span.menu_word=' '+label
+      else
+        .menus_item
+          - const labelArray = label.split('||')
+          - const hideClass = labelArray[3] && trim(labelArray[3]) === 'hide' ? 'hide' : ''
+          a.site-page.group.faa-parent.animated-hover(class=`${hideClass}` href='javascript:void(0);')
+            if labelArray[1]
+              +renderIcon(labelArray[1], labelArray[2])
+            span.menu_word=' '+ trim(labelArray[0])
+            i.fas.fa-chevron-down
+          ul.menus_item_child
+            each val, lab in value
+              - const valArray = val.split('||')
+              li
+                a.site-page.child.faa-parent.animated-hover(href=url_for(trim(valArray[0])))
+                  if valArray[1]
+                    +renderIcon(valArray[1], valArray[2])
+                  span.menu_word=' '+ lab

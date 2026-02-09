@@ -1,0 +1,9 @@
+/* 添加友链按钮 */
+.addBtn { display: flex; justify-content: center; flex-wrap: wrap; }
+.addBtn button {
+  transition: .2s; display: flex; margin: 5px auto;
+  color: var(--global-bg); padding: 15px; border-radius: 40px;
+  background: var(--search-result-title); align-items: center;
+}
+.addBtn button:hover { background: var(--theme-color); color: #fff; }
+.addBtn i { font-size: 1.3rem; margin-right: 10px; }

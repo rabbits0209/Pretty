@@ -1,0 +1,28 @@
+nav#nav
+  span#blog_name
+    a#site-name(href=url_for('/')) #[=config.title]
+
+  #menus
+    !=partial('includes/header/menu_item', {}, {cache: true})
+    center(id="name-container")
+      a(id="page-name" href="javascript:scrollToTop()") PAGE_NAME
+
+    #nav-right
+      if theme.local_search.enable
+        #search-button
+          a.search.faa-parent.animated-hover(title="检索站内任何你想要的信息")
+            svg.faa-tada.icon.nav-icon.nav-icon--search(aria-hidden="true")
+              use(xlink:href='#icon-valentine_-search-love-find-heart')
+            span=' '+_p('search.title')
+
+      a.meihua.faa-parent.animated-hover(onclick="toggleWinbox()" title="美化设置-自定义你的风格" id="meihua-button")
+        svg.faa-tada.icon.nav-icon.nav-icon--meihua(aria-hidden="true")
+          use(xlink:href='#icon-tupian1')
+
+      a.sun_moon.faa-parent.animated-hover(onclick='switchNightMode()' title=_p('rightside.night_mode_title') id="nightmode-button")
+        svg.faa-tada.nav-icon.nav-icon--moon(viewBox='0 0 1024 1024')
+          use#modeicon(xlink:href='#icon-moon')
+
+      #toggle-menu
+        a
+          i.fas.fa-bars.fa-fw

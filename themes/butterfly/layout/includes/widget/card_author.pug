@@ -1,0 +1,33 @@
+if theme.aside.card_author.enable
+  .card-widget.card-info
+    .card-info-overlay
+
+    .card-info-avatar-wrap
+      div.card-info-avatar
+        .avatar-img
+          img(src=url_for(theme.avatar.img) onerror=`this.onerror=null;this.src='` + url_for(theme.error_img.flink) + `'` alt="avatar")
+        div.author-status-box
+          div.author-status
+            g-emoji.g-emoji(alias="palm_tree" fallback-src="https://tutublog.eu.org/file/7b0036a82c018766b5da3.jpg") 🐟
+            span 认真内卷中
+
+    .card-info-body
+      .author-info__name= config.author
+      .author-info__description!= theme.aside.card_author.description || config.description
+
+      .card-info-data.site-data
+        each item in [{href: url_for(config.archive_dir) + '/', label: _p('aside.articles'), num: site.posts.length}, {href: url_for(config.tag_dir) + '/', label: _p('aside.tags'), num: site.tags.length}, {href: url_for(config.category_dir) + '/', label: _p('aside.categories'), num: site.categories.length}]
+          a(href=item.href)
+            .length-num= item.num
+            .headline= item.label
+
+      if theme.aside.card_author.button.enable
+        a#card-info-btn(href=theme.aside.card_author.button.link title="前往作者的Github")
+          span= theme.aside.card_author.button.text
+          i.faa-passing.animated
+            svg.icon
+              use(xlink:href='#icon-xiaoqiche')
+
+      if theme.social
+        .card-info-social-icons.is-center
+          !=fragment_cache('social', function(){return partial('includes/header/social')})

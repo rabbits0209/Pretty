@@ -1,0 +1,75 @@
+#footer-wrap
+  #ft
+    .ft-item-1
+      .t-top
+        .t-t-l
+          p.ft-t.t-l-t 格言🧬
+          .bg-ad
+            div 万事都要全力以赴，包括开心
+            .btn-xz-box
+              a.btn-xz(href='https://stellarium.org/') 点击开启星辰之旅
+        .t-t-r
+          p.ft-t.t-l-t 猜你想看💡
+          ul.ft-links
+            li
+              a(href='/social/fcircle/') 朋友圈
+              a(href='https://status.tutuxka.eu.org/') 站点监测
+            li
+              a(href='https://music.tutuxka.eu.org/') 音乐
+              a(href='https://home.tutuxka.eu.org/') 首页
+    .ft-item-2
+      p.ft-t 推荐友链⌛
+      .ft-img-group
+        .img-group-item
+          a(href='https://blog.xn--eet944d.top/' title='兔兔博客🥝')
+            img(src='https://tutublog.eu.org/file/1763260619100_Image_1759321330220.jpg' alt='')
+        .img-group-item
+          a(href='https://www.mmbkz.cn/' title='喵喵博客志')
+            img(src='https://cdn.helingqi.com/avatar/90d65b07462dd2b0cb32ba3e3187759d?s=200&r=&d=404' alt='')
+        .img-group-item
+          a(href='https://www.langhai.net/' title='浪海导航')
+            img(src='https://www.langhai.net/assets/images/langhai-logo.png' alt='')
+        .img-group-item
+          a(href='https://www.kxyr.top/' title='空巷')
+            img(src='https://www.kxyr.top/assets/img/logo.jpg' alt='')
+        .img-group-item
+          a(href='https://www.fomal.cc/' title='Fomalhaut🥝')
+            img(src='https://www.fomal.cc/assets/avatar.webp' alt='')
+        .img-group-item
+          a(href='https://blog.yaria.top' title='Ariasakaの小窝')
+            img(src='https://img.0v0.my/2024/12/05/67517bcf104da.png' alt='')
+        .img-group-item
+          a(href='https://koxiuqiu.cn/' title='朽丘秋雨')
+            img(src='https://tutublog.eu.org/file/fU8a827e.png' alt='')
+        .img-group-item
+          a(href='https://love.xingji.fun/' title='XingJiのBlog')
+            img(src='https://i.p-i.vip/47/20240920-66ed7b168c38c.jpg' alt='')
+
+  if theme.footer.owner.enable
+    - var now = new Date()
+    - var nowYear = now.getFullYear()
+    - var yearText = (theme.footer.owner.since && theme.footer.owner.since != nowYear) ? `${theme.footer.owner.since}-${nowYear}` : `${nowYear}`
+    .copyright
+      span!= `<b>&copy;${yearText}</b>`
+      span!= `<b>&nbsp;&nbsp;By ${config.author}</b>`
+  if theme.footer.copyright
+    .framework-info
+      span= _p('footer.framework') + ' '
+      a(href='https://hexo.io')= 'Hexo'
+      span.footer-separator |
+      span= _p('footer.theme') + ' '
+      a(href='https://github.com/jerryc127/hexo-theme-butterfly')= 'Butterfly'
+  if theme.footer.custom_text
+    .footer_custom_text!=`${theme.footer.custom_text}`
+  #workboard
+  p#ghbdages
+    a.github-badge(target='_blank' href='https://hexo.io/' title='博客框架为Hexo_v6.3.0')
+      img(src='https://sourcebucket.s3.bitiful.net/badge/Frame-Hexo-blue.svg' alt='')
+    a.github-badge(target='_blank' href='https://butterfly.js.org/' title='主题版本Butterfly_v4.3.1')
+      img(src='https://sourcebucket.s3.bitiful.net/badge/Theme-Butterfly-6513df.svg' alt='')
+    a.github-badge(target='_blank' href='https://vercel.com/' title='本站采用多线部署，主线路托管于Vercel')
+      img(src='https://sourcebucket.s3.bitiful.net/badge/Hosted-Vercel-brightgreen.svg' alt='')
+    a.github-badge(target='_blank' href='https://icp.gov.moe/?keyword=20250700' title='本站已加入萌ICP豪华套餐，萌ICP备20250700号')
+      img(src='/assets/萌ICP备-20250700-fe1384.svg' alt='')
+    a.github-badge(target='_blank' href='https://github.com/' title='本网站源码由Github提供存储仓库')
+      img(src='https://sourcebucket.s3.bitiful.net/badge/Source-Github-d021d6.svg' alt='')

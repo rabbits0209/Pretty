@@ -1,0 +1,295 @@
+# Main menu navigation (導航目錄)
+# --------------------------------------
+
+menu:
+
+# Code Blocks (代碼相關)
+# --------------------------------------
+
+highlight_theme: light
+highlight_copy: true
+highlight_lang: true
+highlight_shrink: false
+highlight_height_limit: false
+code_word_wrap: false
+
+copy:
+  enable: true
+  copyright:
+    enable: false
+    limit_count: 50
+
+# social settings (社交圖標設置)
+social:
+
+# search (搜索)
+# --------------------------------------
+
+local_search:
+  enable: false
+  preload: false
+  CDN:
+
+# Math (數學)
+# --------------------------------------
+
+mathjax:
+  enable: false
+  per_page: false
+
+# Image (圖片設置)
+# --------------------------------------
+
+favicon: /img/favicon.png
+
+avatar:
+  img: https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png
+  effect: false
+
+disable_top_img: false
+index_img:
+default_top_img:
+archive_img:
+tag_img:
+tag_per_img:
+category_img:
+category_per_img:
+
+cover:
+  index_enable: true
+  aside_enable: true
+  archives_enable: true
+  position: both
+  default_cover:
+
+error_img:
+  flink: /img/friend_404.gif
+  post_page: /img/404.jpg
+
+error_404:
+  enable: false
+  subtitle: 'Page Not Found'
+  background:
+
+post_meta:
+  page:
+    date_type: created
+    date_format: date
+    categories: true
+    tags: false
+    label: true
+  post:
+    date_type: both
+    date_format: date
+    categories: true
+    tags: true
+    label: true
+
+wordcount:
+  enable: false
+  post_wordcount: true
+  min2read: true
+  total_wordcount: true
+
+index_post_content:
+  method: 3
+  length: 500
+
+anchor: false
+
+# Post
+# --------------------------------------
+
+toc:
+  post: true
+  page: false
+  number: true
+  expand: false
+  style_simple: false
+
+post_copyright:
+  enable: true
+  decode: false
+  author_href:
+  license: CC BY-NC-SA 4.0
+  license_url: https://creativecommons.org/licenses/by-nc-sa/4.0/
+
+related_post:
+  enable: true
+  limit: 6
+  date_type: created
+
+photofigcaption: false
+post_pagination: 1
+
+# Comments System
+# --------------------------------------
+
+comments:
+  use:
+  text: true
+  lazyload: false
+  count: false
+  card_post_count: false
+
+twikoo:
+  envId:
+  region:
+  visitor: false
+  option:
+
+# Footer Settings
+# --------------------------------------
+
+footer:
+  owner:
+    enable: true
+    since: 2020
+  custom_text:
+  copyright: true
+
+# Beautify/Effect (美化/效果)
+# --------------------------------------
+
+index_site_info_top:
+index_top_img_height:
+category_ui:
+tag_ui:
+background:
+footer_bg: false
+rightside-bottom:
+enter_transitions: true
+
+activate_power_mode:
+  enable: false
+  colorful: true
+  shake: true
+  mobile: false
+
+display_mode: light
+
+beautify:
+  enable: false
+  field: post
+  title-prefix-icon:
+  title-prefix-icon-color:
+
+font:
+  global-font-size:
+  code-font-size:
+  font-family:
+  code-font-family:
+
+blog_title_font:
+  font_link:
+  font-family:
+
+hr_icon:
+  enable: true
+  icon:
+  icon-top:
+
+subtitle:
+  enable: false
+  effect: true
+  loop: true
+  source: false
+  sub:
+
+preloader: false
+
+# aside (側邊欄)
+# --------------------------------------
+
+aside:
+  enable: true
+  hide: false
+  button: true
+  mobile: true
+  position: right
+  display:
+    archive: true
+    tag: true
+    category: true
+  card_author:
+    enable: true
+    description:
+    button:
+      enable: true
+      icon: fab fa-github
+      text: Follow Me
+      link: https://github.com/xxxxxx
+  card_announcement:
+    enable: true
+    content: This is my Blog
+  card_recent_post:
+    enable: false
+  card_categories:
+    enable: false
+  card_tags:
+    enable: false
+  card_archives:
+    enable: false
+    format: MMMM YYYY
+  card_webinfo:
+    enable: true
+    post_count: true
+    last_push_date: true
+    sort_order:
+
+busuanzi:
+  site_uv: true
+  site_pv: true
+  page_pv: true
+
+# Bottom right button (右下角按鈕)
+# --------------------------------------
+
+readmode: true
+
+darkmode:
+  enable: true
+  button: true
+  autoChangeMode: false
+
+# Lightbox (圖片大圖查看模式)
+# --------------------------------------
+
+fancybox: true
+
+# Note (Bootstrap Callout)
+note:
+  style: flat
+  icons: true
+  border_radius: 3
+  light_bg_offset: 0
+
+# other
+# --------------------------------------
+
+pjax:
+  enable: false
+  exclude:
+
+instantpage: false
+
+lazyload:
+  enable: false
+  field: site
+  placeholder:
+  blur: false
+
+Open_Graph_meta: true
+css_prefix: true
+
+inject:
+  head:
+  bottom:
+
+# CDN
+CDN:
+  internal_provider: local
+  third_party_provider: jsdelivr
+  version: false
+  custom_format:
+  option:

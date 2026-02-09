@@ -1,0 +1,9 @@
+if theme.aside.card_announcement.enable
+  .card-widget.card-announcement
+    .item-headline
+      a.faa-parent.animated-hover
+        svg.faa-tada.icon.aside-icon(aria-hidden="true")
+          use(xlink:href='#icon-gonggao')
+      span.announcement-title= _p('aside.card_announcement')
+    .announcement_content!= theme.aside.card_announcement.content
+    #welcome-info

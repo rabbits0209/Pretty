@@ -1,0 +1,31 @@
+if theme.aside.card_webinfo.enable
+  .card-widget.card-webinfo
+    .item-headline
+      a.faa-parent.animated-hover
+        svg.faa-tada.icon.aside-icon(aria-hidden="true")
+          use(xlink:href='#icon-shujutongji2')
+      span(style="font-weight:bold")= _p('小站资讯')
+    .webinfo
+      if theme.aside.card_webinfo.post_count
+        .webinfo-item
+          .item-name= _p('aside.card_webinfo.article_name') + " :"
+          .item-count= site.posts.length
+      if theme.wordcount.enable && theme.wordcount.total_wordcount
+        .webinfo-item
+          .item-name=_p('aside.card_webinfo.site_wordcount') + " :"
+          .item-count=totalcount(site)
+      if theme.busuanzi.site_uv
+        .webinfo-item
+          .item-name= _p('aside.card_webinfo.site_uv_name') + " :"
+          .item-count#busuanzi_value_site_uv
+            i.fa-solid.fa-spinner.fa-spin
+      if theme.busuanzi.site_pv
+        .webinfo-item
+          .item-name= _p('aside.card_webinfo.site_pv_name') + " :"
+          .item-count#busuanzi_value_site_pv
+            i.fa-solid.fa-spinner.fa-spin
+      if theme.aside.card_webinfo.last_push_date
+        .webinfo-item
+          .item-name= _p('aside.card_webinfo.last_push_date.name') + " :"
+          .item-count#last-push-date(data-lastPushDate=date_xml(Date.now()))
+            i.fa-solid.fa-spinner.fa-spin

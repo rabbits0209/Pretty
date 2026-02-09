@@ -1,0 +1,487 @@
+# Main menu navigation (導航目錄)
+# --------------------------------------
+
+menu:
+  首页: / || icon-home || faa-tada
+  旧时光: /time/ || icon-xianxingshalou || faa-tada
+  追番: /bangumis/ || icon-nvwumao || faa-tada
+  文章 || icon--article || faa-tada || hide:
+    归档: /archives/ || icon-guidang1 || faa-tada
+    标签: /tags/ || icon-sekuaibiaoqian || faa-tada
+    分类: /categories/ || icon-fenlei || faa-tada
+  社交 || icon-shejiaoxinxi || faa-tada || hide:
+    朋友圈: /social/fcircle/ || icon-pengyouquan || faa-tada
+    留言板: /comments/ || icon-liuyan || faa-tada
+    友人帐: /social/link/ || icon-lianjie || faa-tada
+  个人 || icon-maoliang || faa-tada || hide:
+    唠叨: /personal/bb/ || icon-qunliaotian || faa-tada
+    恋爱小屋: /personal/love/ || icon-love-sign || faa-tada
+    关于: /personal/about/ || icon-paperplane || faa-tada
+
+# Code Blocks (代碼相關)
+# --------------------------------------
+
+highlight_theme: mac
+highlight_copy: true
+highlight_lang: true
+highlight_shrink: false
+highlight_height_limit: 230
+code_word_wrap: false
+
+copy:
+  enable: true
+  copyright:
+    enable: false
+    limit_count: 50
+
+# Social (社交圖標設置)
+# --------------------------------------
+
+social:
+  Github: https://github.com/tutuxka || icon-github || faa-tada
+  QQ: https://res.abeim.cn/api/qq/?qq=1742305143 || icon-QQ || faa-tada
+  QQ邮箱: mailto:1742305143@qq.com || icon-youxiang || faa-tada
+  RSS: /atom.xml || icon-RSS || faa-tada
+
+# Search (搜索)
+# --------------------------------------
+
+local_search:
+  enable: true
+  preload: true
+  CDN:
+
+# Math (數學)
+# --------------------------------------
+
+mathjax:
+  enable: true
+  per_page: false
+  cdn: https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML
+
+# Image (圖片設置)
+# --------------------------------------
+
+favicon:
+
+avatar:
+  img: https://tutublog.eu.org/file/1763260619100_Image_1759321330220.jpg
+  effect: true
+
+disable_top_img: false
+index_img:
+default_top_img:
+archive_img:
+tag_img: false
+tag_per_img:
+category_img:
+category_per_img:
+
+cover:
+  index_enable: true
+  aside_enable: true
+  archives_enable: true
+  position: both
+  default_cover:
+    - https://t.alcy.cc/moez
+    - https://t.alcy.cc/ycy
+    - https://www.loliapi.com/acg/
+
+error_404:
+  enable: true
+  subtitle: "此页面不存在哦!"
+  background: /assets/404_1.jpg
+
+post_meta:
+  page:
+    date_type: both
+    date_format: relative
+    categories: true
+    tags: true
+    label: true
+  post:
+    date_type: both
+    date_format: relative
+    categories: true
+    tags: true
+    label: true
+
+wordcount:
+  enable: true
+  post_wordcount: true
+  min2read: true
+  total_wordcount: true
+
+index_post_content:
+  method: 2
+  length: 500
+
+anchor: false
+
+# Post (文章)
+# --------------------------------------
+
+toc:
+  post: true
+  page: false
+  number: false
+  expand: false
+  style_simple: true
+
+post_copyright:
+  enable: true
+  decode: true
+  author_href:
+  license: CC BY-NC-SA 4.0
+  license_url: https://creativecommons.org/licenses/by-nc-sa/4.0/
+
+related_post:
+  enable: true
+  limit: 6
+  date_type: updated
+
+photofigcaption: false
+post_pagination: 1
+
+# Comments (評論)
+# --------------------------------------
+
+comments:
+  use:
+    - Twikoo
+  text: true
+  lazyload: true
+  count: false
+  card_post_count: false
+
+twikoo:
+  envId: https://twikoo.tutuxka.eu.org
+  region:
+  visitor: true
+  option:
+
+# Footer (頁腳)
+# --------------------------------------
+
+footer:
+  owner:
+    enable: true
+    since: 2022
+  custom_text:
+  copyright: false
+
+# Beautify/Effect (美化/效果)
+# --------------------------------------
+
+theme_color:
+  enable: true
+  main: "#FF6B9D"
+  paginator: "#FF6B9D"
+  button_hover: "#FF85B3"
+  text_selection: "#FFB6C1"
+  link_color: "#E75480"
+  meta_color: "#999999"
+  hr_color: "#FFD1DC"
+  code_foreground: "#E75480"
+  code_background:
+  toc_color: "#FF6B9D"
+  blockquote_padding_color: "#FFB6C1"
+  blockquote_background_color: "#FFB6C1"
+  scrollbar_color: "#FF6B9D"
+  meta_theme_color_light: "#fff0f5"
+  meta_theme_color_dark: "#0d0d0d"
+
+index_site_info_top:
+index_top_img_height:
+category_ui:
+tag_ui:
+
+background:
+  default: var(--default-bg)
+  darkmode: var(--darkmode-bg)
+  mobileday: var(--mobileday-bg)
+  mobilenight: var(--mobilenight-bg)
+
+footer_bg: false
+rightside-bottom:
+enter_transitions: true
+
+activate_power_mode:
+  enable: true
+  colorful: true
+  shake: true
+  mobile: false
+
+display_mode: light
+
+beautify:
+  enable: true
+  field: site
+  title-prefix-icon: '\f863'
+  title-prefix-icon-color: "#F47466"
+
+font:
+  global-font-size: 15.5px
+  code-font-size: 14.5px
+  font-family: var(--global-font), -apple-system, 'Quicksand', 'Nimbus Roman No9 L', 'PingFang SC', 'Hiragino Sans GB', 'Noto Serif SC', 'Microsoft Yahei', 'WenQuanYi Micro Hei', 'ST Heiti', sans-serif;
+  code-font-family: Consolas_1, var(--global-font), "Microsoft YaHei", Menlo, "PingFang SC", "Microsoft JhengHei", sans-serif
+
+blog_title_font:
+  font_link:
+  font-family: var(--global-font)
+
+hr_icon:
+  enable: true
+  icon: '\f2dc'
+  icon-top: -10px
+
+subtitle:
+  enable: true
+  effect: true
+  loop: true
+  source: 1
+  sub:
+
+preloader:
+  enable: true
+  load_color:
+  load_style: heo
+  load_image:
+
+# Aside (側邊欄)
+# --------------------------------------
+
+aside:
+  enable: true
+  hide: false
+  button: true
+  mobile: true
+  position: right
+  display:
+    archive: true
+    tag: true
+    category: true
+  card_author:
+    enable: true
+    description:
+    button:
+      enable: true
+      icon:
+      text: 前往小窝
+      link: https://github.com/fomalhaut1998
+  card_announcement:
+    enable: true
+    content: 所得皆所愿，所愿皆所想，所想皆所成
+  card_recent_post:
+    enable: false
+    limit: 3
+    sort: date
+    sort_order:
+  card_categories:
+    enable: false
+    limit: 8
+    expand: none
+    sort_order:
+  card_tags:
+    enable: false
+    limit: 20
+    color: true
+    sort_order:
+  card_archives:
+    enable: false
+    type: monthly
+    format: MMMM YYYY
+    order: -1
+    limit: 8
+    sort_order:
+  card_webinfo:
+    enable: true
+    post_count: true
+    last_push_date: true
+    sort_order:
+  card_friend_link:
+    enable: true
+    sort_order:
+
+busuanzi:
+  site_uv: true
+  site_pv: true
+  page_pv: true
+
+# Bottom right button (右下角按鈕)
+# --------------------------------------
+
+readmode: 2
+
+darkmode:
+  enable: true
+  button: true
+  autoChangeMode: 2
+
+# Lightbox (圖片大圖查看模式)
+# --------------------------------------
+
+fancybox: true
+
+note:
+  style: flat
+  icons: true
+  border_radius: 3
+  light_bg_offset: 0
+
+# Other
+# --------------------------------------
+
+pjax:
+  enable: true
+  exclude:
+
+instantpage: true
+
+lazyload:
+  enable: true
+  field: site
+  placeholder:
+  blur: true
+
+Open_Graph_meta: true
+css_prefix: true
+
+# Inject (注入)
+# --------------------------------------
+
+inject:
+  head:
+    - <link rel="stylesheet" href="https://cdn.jsdmirror.com/ajax/libs/element-ui/2.15.7/theme-chalk/index.css">
+    - <link rel="stylesheet" href="https://cdn.jsdmirror.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    - <style id="themeColor"></style>
+    - <style id="rightSide"></style>
+    - <style id="transPercent"></style>
+    - <style id="blurNum"></style>
+    - <style id="settingStyle"></style>
+    - <span id="fps"></span>
+    - <style id="defineBg"></style>
+    - <style id="menu_shadow"></style>
+  bottom:
+    - <script src="https://cdn.jsdmirror.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    - <script src="/js/qexo-dao.min.js"></script>
+    - <script async src="https://cdn.jsdmirror.com/ajax/libs/vue/2.6.14/vue.min.js"></script>
+    - <script async src="https://cdn.jsdmirror.com/ajax/libs/element-ui/2.15.7/index.js"></script>
+    - <script async src="https://cdn.jsdmirror.com/ajax/libs/clipboard.js/2.0.10/clipboard.min.js"></script>
+    - <script defer src="https://cdn.jsdmirror.com/ajax/libs/sweetalert2/8.19.1/sweetalert2.all.js"></script>
+    - <script async src="https://cdn.jsdmirror.com/ajax/libs/pace/1.2.4/pace.min.js"></script>
+    - <script defer src="https://cdn.jsdmirror.com/gh/nextapps-de/winbox@0.2.82/dist/winbox.bundle.min.js"></script>
+    - <script async src="//at.alicdn.com/t/c/font_3586335_hsivh70x0fm.js"></script>
+    - <script async src="//at.alicdn.com/t/c/font_3636804_gr02jmjr3y9.js"></script>
+    - <script async src="//at.alicdn.com/t/c/font_3612150_kfv55xn3u2g.js"></script>
+    - <canvas id="universe"></canvas>
+    - <canvas id="snow"></canvas>
+    - <script defer src="/js/fomal.js"></script>
+
+# CDN
+# --------------------------------------
+
+CDN:
+  internal_provider: local
+  third_party_provider: cdnjs
+  version: false
+  custom_format:
+  option:
+    pjax: https://cdn.jsdmirror.com/ajax/libs/pjax/0.2.8/pjax.min.js
+    twikoo: https://cdn.jsdmirror.com/ajax/libs/twikoo/1.6.8/twikoo.all.min.js
+    lazyload: https://cdn.jsdmirror.com/ajax/libs/vanilla-lazyload/17.3.1/lazyload.iife.min.js
+    instantpage: https://cdn.jsdmirror.com/ajax/libs/instant.page/5.1.0/instantpage.min.js
+    typed: https://cdn.jsdmirror.com/ajax/libs/typed.js/2.0.12/typed.min.js
+    fancybox_css_v4: https://cdn.jsdmirror.com/ajax/libs/fancyapps-ui/4.0.31/fancybox.min.css
+    fancybox_v4: https://cdn.jsdmirror.com/ajax/libs/fancyapps-ui/4.0.31/fancybox.umd.min.js
+    fontawesomeV6: https://cdn.jsdmirror.com/ajax/libs/font-awesome/6.0.0/css/all.min.css
+
+# WowJS 动画
+# --------------------------------------
+
+wowjs:
+  enable: true
+  priority: 10
+  mobile: false
+  animateitem:
+    - class: recent-post-item
+      style: animate__zoomIn
+      duration: 2s
+      delay: 200ms
+      offset: 30
+      iteration: 1
+    - class: card-widget
+      style: animate__zoomIn
+      duration: 2s
+      delay: 200ms
+      offset: 30
+      iteration: 1
+  animate_css: https://npm.elemecdn.com/hexo-butterfly-wowjs/lib/animate.min.css
+  wow_js: https://npm.elemecdn.com/hexo-butterfly-wowjs/lib/wow.min.js
+  wow_init_js: https://npm.elemecdn.com/hexo-butterfly-wowjs/lib/wow_init.js
+
+# 留言板
+# --------------------------------------
+
+envelope_comment:
+  enable: true
+  custom_pic:
+    cover: https://unpkg.com/hexo-butterfly-envelope@1.0.15/lib/violet.jpg
+    line: https://unpkg.com/hexo-butterfly-envelope@1.0.15/lib/line.png
+    beforeimg: https://unpkg.com/hexo-butterfly-envelope@1.0.15/lib/before.png
+    afterimg: https://unpkg.com/hexo-butterfly-envelope@1.0.15/lib/after.png
+  message:
+    - 本站有哪些做得好或者不好的地方？
+    - 或者你有什么改进的建议？
+    - 又或者你有什么具体的问题需要咨询？
+    - 都可以在下方评论区留言哦~~~
+  bottom: 兔兔小站站长亲自为您服务！
+  height:
+  path:
+  front_matter:
+    title: 留言板
+    comments: true
+
+# Other Plugins
+# --------------------------------------
+
+flink_style: volantis
+
+error_img:
+  flink: /assets/r1.jpg
+  post_page: /assets/r2.jpg
+
+tag_plugins:
+  enable: true
+  priority: 5
+  issues: false
+  link:
+    placeholder: "/assets/coffee.png"
+  CDN:
+    anima: https://npm.elemecdn.com/hexo-butterfly-tag-plugins-plus@latest/lib/assets/font-awesome-animation.min.css
+    jquery: https://cdn.staticfile.net/jquery/3.6.3/jquery.min.js
+    issues: https://npm.elemecdn.com/hexo-butterfly-tag-plugins-plus@latest/lib/assets/issues.js
+    carousel: https://npm.elemecdn.com/hexo-butterfly-tag-plugins-plus@latest/lib/assets/carousel-touch.js
+    tag_plugins_css: https://npm.elemecdn.com/hexo-butterfly-tag-plugins-plus@latest/lib/tag_plugins.css
+
+index_card_style: multicard
+
+# 分类导航栏 (Category Bar)
+# --------------------------------------
+
+categoryBar:
+  enable: true
+  priority: 1
+  enable_page: /
+  layout:
+    type: id
+    name: recent-posts
+    index: 0
+  column: odd
+  row: 1
+  message:
+    - descr: 生活点滴
+      cover: https://www.loliapi.com/acg/
+    - descr: 技术教程
+      cover: https://t.alcy.cc/ycy
+  custom_css: /css/categorybar.css

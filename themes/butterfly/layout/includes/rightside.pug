@@ -1,0 +1,58 @@
+- const { readmode, darkmode, aside } = theme
+mixin rightsideItem(array)
+  each item in array
+    case item
+      when 'readmode'
+        if is_post() && readmode
+          button#readmode(type="button" title=_p('rightside.readmode_title'))
+            i.fas.fa-book-open
+      when 'darkmode'
+        if darkmode.enable && darkmode.button
+          a.icon-V.hidden(onclick='switchNightMode()',  title=_p('rightside.night_mode_title'))
+            svg(width='25', height='25', viewBox='0 0 1024 1024')
+              use#modeicon(xlink:href='#icon-moon')
+      when 'hideAside'
+        if aside.enable && aside.button && page.aside !== false
+          button#hide-aside-btn(type="button" title=_p('rightside.aside'))
+            i.fas.fa-arrows-alt-h
+      when 'toc'
+        if showToc
+          button#mobile-toc-button.close(type="button" title=_p("rightside.toc"))
+            i.fas.fa-list-ul
+      when 'comment'
+        if commentsJsLoad
+          a#to_comment(href="#post-comment" title=_p("rightside.scroll_to_comment"))
+            i.fas.fa-comments
+      when 'share'
+        button.share(type="button" title='分享链接' onclick="share()")
+          i.fas.fa-share-nodes
+
+      when 'mouse'
+        button.share(type="button" title='右键模式' onclick="changeMouseMode()")
+          i.fas.fa-mouse
+
+
+#rightside
+  - const hideArray = ['readmode','darkmode','hideAside', 'mouse']
+  - const showArray = ['toc','share','comment']
+
+  #rightside-config-hide
+    +rightsideItem(hideArray)
+  #rightside-config-show
+    if is_post()
+      if (readmode || (darkmode.enable && darkmode.button))
+        button#rightside_config(type="button" title=_p("rightside.setting"))
+          i.fas.fa-cog.right_side
+    else if hideArray
+      button#rightside_config(type="button" title=_p("rightside.setting"))
+        i.fas.fa-cog.right_side
+
+    +rightsideItem(showArray)
+
+    button#go-up(type="button" title=_p("rightside.back_to_top"))
+      i.fas.fa-arrow-up
+      span#percent 0
+        span %
+
+    button#go-down(type="button" title="直达底部" onclick="btf.scrollToDest(document.body.scrollHeight, 500)")
+      i.fas.fa-arrow-down

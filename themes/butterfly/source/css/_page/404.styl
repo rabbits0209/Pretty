@@ -1,0 +1,90 @@
+if hexo-config('error_404.enable')
+  .error404
+    #error-wrap
+      display: flex
+      align-items: center
+      justify-content: center
+      min-height: calc(100vh - 60px)
+      padding: 20px
+
+      .error-content
+        @extend .cardHover
+        display: flex
+        overflow: hidden
+        max-width: 1000px
+        width: 100%
+
+        +maxWidth768()
+          flex-direction: column
+          max-width: 400px
+
+        .error-img
+          overflow: hidden
+          width: 50%
+          flex-shrink: 0
+
+          +maxWidth768()
+            width: 100%
+            height: 200px
+
+          img
+            width: 100%
+            height: 100%
+            object-fit: cover
+            transition: transform .6s
+            background-color: $theme-color
+
+            &:hover
+              transform: scale(1.1)
+
+        .error-info
+          display: flex
+          flex-direction: column
+          justify-content: center
+          align-items: center
+          width: 50%
+          padding: 30px 20px
+          text-align: center
+
+          if $site-name-font
+            font-family: $site-name-font
+
+          +maxWidth768()
+            width: 100%
+            padding: 20px 16px
+
+          .error_title
+            font-size: 7em
+            line-height: 1
+
+            +maxWidth768()
+              font-size: 4.5em
+
+          .error_subtitle
+            @extend .limit-more-line
+            margin-top: 10px
+            word-break: break-word
+            font-size: 1.4em
+            -webkit-line-clamp: 2
+
+            +maxWidth768()
+              font-size: 1.2em
+
+          .error_btn
+            display: inline-block
+            margin-top: 20px
+            padding: 8px 24px
+            border-radius: 20px
+            background: var(--btn-bg)
+            color: var(--btn-color)
+            font-size: 1em
+            transition: background .3s
+
+            &:hover
+              background: var(--btn-hover-color)
+
+            +maxWidth768()
+              margin-top: 16px
+
+    & + #rightside
+      display: none

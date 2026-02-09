@@ -1,0 +1,221 @@
+// 默认的首页卡片容器布局
+.recent-posts
+  padding 0 5px 0 5px
+  height fit-content
+  .recent-post-item
+    margin-bottom 15px
+    overflow hidden
+    border-radius 18px
+    opacity 0
+    transform translateY(30px)
+    transition: box-shadow 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), border-color 0.3s ease
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06)
+    border: 1px solid rgba(169, 169, 169, 0.15)
+    &:hover
+      transform: translateY(-5px)
+      box-shadow: 0 12px 32px rgba(255, 107, 157, 0.12), 0 4px 12px rgba(0, 0, 0, 0.06)
+      border-color: rgba(255, 107, 157, 0.25)
+    &:hover
+      .recent-post-cover
+        img
+          transform: scale(1.06)
+          filter: blur(0px) brightness(1.05) !important
+      .article-content
+        backdrop-filter: none !important
+        .article-content-text
+          transform: scale(1.05)
+    .recent-post-content
+      display flex
+      position relative
+      .recent-post-cover
+        display flex
+        background transparent
+        overflow hidden
+        position relative
+      .recent-post-info
+        display flex
+        background transparent
+        flex-direction column
+        justify-content center
+        align-items center
+        .article-title
+          height 50%
+          display: flex
+          text-align: center
+          align-items: center
+          justify-content: flex-end
+          flex-direction: column
+          .article-title-link
+            color: var(--text-highlight-color)
+            transition: color .3s ease, letter-spacing .3s ease
+            display: -webkit-box
+            -webkit-box-orient: vertical
+            overflow: hidden
+            font-weight: 600
+            letter-spacing: 0.3px
+            &:hover
+              color: var(--theme-color)
+              letter-spacing: 0.6px
+        .recent-post-meta
+          height 50%
+          display: flex
+          text-align: center
+          align-items: center
+          justify-content: flex-start
+          flex-direction: column
+          .article-meta-wrap
+            color #969797
+            display: -webkit-box
+            -webkit-box-orient: vertical
+            overflow: hidden
+            transition: opacity 0.3s ease
+            a
+              color: var(--text-highlight-color)
+              transition: all .2s ease-in-out
+              color #969797
+      .article-content
+        display flex
+        text-align: center
+        flex-direction row
+        align-items center
+        justify-content center
+        .article-content-text
+          display -webkit-box
+          -webkit-box-orient vertical
+          text-overflow: ellipsis
+          overflow hidden
+          color #fff
+          text-shadow 1px 2px 3px #000
+          transition: transform 0.3s ease
+    &.ads-wrap
+      display: block !important
+      height: auto !important
+  nav#pagination
+    width: 100%
+
+// 卡片单元布局样式
+.recent-posts
+  padding 0 5px 0 5px
+  display flex
+  flex-direction row
+  flex-wrap wrap
+  .recent-post-item
+    border-radius 18px
+    overflow hidden
+    .recent-post-content
+      flex-direction column
+      flex-wrap nowrap
+      align-items center
+      max-height 360px
+      height: auto
+      width 100%
+      .recent-post-cover
+        width 100%
+        height 210px
+        clip-path polygon(0 140px,0 0,100% 0,100% 140px,50% 100%)
+        position relative
+        img
+          height 210px
+          width 100%
+          object-fit cover
+          filter: blur(1.5px) brightness(0.95)
+          transition: transform .6s cubic-bezier(0.25, 0.8, 0.25, 1), filter .6s ease
+        // 封面底部渐变遮罩
+        &::after
+          content ''
+          position absolute
+          bottom 0
+          left 0
+          width 100%
+          height 60%
+          background linear-gradient(to top, rgba(0,0,0,0.15), transparent)
+          clip-path polygon(0 140px,0 0,100% 0,100% 140px,50% 100%)
+          pointer-events none
+          opacity 0
+          transition opacity 0.4s ease
+      &:hover .recent-post-cover::after
+        opacity 1
+      .recent-post-info
+        height 150px
+        width 100%
+        padding 0px 25px 8px 25px
+        .article-title
+          margin: 0px 40px
+          font-size 19px
+          .article-title-link
+            -webkit-line-clamp: 2
+            line-height: 1.4
+        .recent-post-meta
+          margin: 0px 20px
+          .article-meta-wrap
+            font-size 13px
+            -webkit-line-clamp: 3
+            line-height: 1.6
+      .article-content
+        position absolute
+        height 210px
+        width 100%
+        background linear-gradient(135deg, rgba(25,25,25,0.45), rgba(25,25,25,0.3))
+        clip-path polygon(0 140px,0 0,100% 0,100% 140px,50% 100%)
+        .article-content-text
+          -webkit-line-clamp 3
+          font-size 16px
+          margin 0px 25px 30px 25px
+          line-height 1.5
+          &::before
+            content "「"
+            font-size 20px
+          &::after
+            content "」"
+            font-size 20px
+      // 装饰箭头 - 脉冲圆点
+      .recent-post-arrow
+        display block
+        width 8px
+        height 8px
+        border-radius 50%
+        background var(--theme-color)
+        position absolute
+        bottom 8px
+        left 50%
+        margin-left -4px
+        opacity 0.6
+        animation arrow-pulse 2s ease-in-out infinite
+
+@keyframes arrow-pulse
+  0%, 100%
+    transform: scale(1)
+    opacity: 0.5
+  50%
+    transform: scale(1.6)
+    opacity: 0.9
+
+// 三栏布局
+@media screen and (min-width:1069px)
+  .recent-posts
+    .recent-post-item
+      width 32.3%
+      margin 0px 1% 20px 0px
+      .recent-post-content
+        .recent-post-info
+          .article-title
+            margin: 0px 8px
+            .article-title-link
+              -webkit-line-clamp: 1
+          .recent-post-meta
+            margin: 0px 8px
+            .article-meta-wrap
+              -webkit-line-clamp: 2
+
+// 双栏布局
+@media screen and (min-width:572px) and (max-width:1068px)
+  .recent-posts
+    .recent-post-item
+      width 47%
+      margin 0px 3% 20px 0px
+
+// 单栏布局
+@media screen and (max-width:572px)
+  .recent-posts
+    .recent-post-item
+      width 100%

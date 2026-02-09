@@ -1,0 +1,7 @@
+if theme.activate_power_mode.enable
+  script(src=url_for(theme.asset.activate_power_mode))
+  script.
+    POWERMODE.colorful = !{theme.activate_power_mode.colorful};
+    POWERMODE.shake = !{theme.activate_power_mode.shake};
+    POWERMODE.mobile = !{theme.activate_power_mode.mobile};
+    document.body.addEventListener('input', POWERMODE);

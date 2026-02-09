@@ -1,0 +1,21 @@
+#sidebar
+  #menu-mask
+  #sidebar-menus
+    .sidebar-avatar.is-center
+      img(src=url_for(theme.avatar.img) onerror=`onerror=null;src='${theme.error_img.flink}'` alt="avatar")
+    .sidebar-author= config.author || config.title
+    if config.description
+      .sidebar-desc= config.description
+
+    .sidebar-stat
+      a(href=url_for(config.archive_dir) + '/')
+        .stat-num= site.posts.length
+        .stat-label= _p('aside.articles')
+      a(href=url_for(config.tag_dir) + '/')
+        .stat-num= site.tags.length
+        .stat-label= _p('aside.tags')
+      a(href=url_for(config.category_dir) + '/')
+        .stat-num= site.categories.length
+        .stat-label= _p('aside.categories')
+
+    !=partial('includes/header/menu_item', {}, {cache: true})

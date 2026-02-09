@@ -1,0 +1,97 @@
+- let comments = theme.comments
+#post-info
+  h1.post-title= page.title || _p('no_title')
+
+  #post-meta
+    .meta-firstline
+      if theme.post_meta.post.date_type
+        span.post-meta-date
+          if theme.post_meta.post.date_type === 'both'
+            svg.meta_icon.meta_icon--xxl.post-meta-icon
+              use(xlink:href='#icon-rili')
+            span.post-meta-label= _p('post.created') + " "
+            time.post-meta-date-created(datetime=date_xml(page.date) title=_p('post.created') + ' ' + full_date(page.date))=date(page.date, config.date_format)
+            span.post-meta-separator |
+            svg.meta_icon.meta_icon--sm.post-meta-icon
+              use(xlink:href='#icon-gengxin1')
+            span.post-meta-label= _p('post.updated')
+            time.post-meta-date-updated(datetime=date_xml(page.updated) title=_p('post.updated') + ' ' + full_date(page.updated))=date(page.updated, config.date_format)
+          else
+            - let data_type_update = theme.post_meta.post.date_type === 'updated'
+            - let date_type = data_type_update ? 'updated' : 'date'
+            - let date_icon = data_type_update ? 'fas fa-history' :'far fa-calendar-alt'
+            - let date_title = data_type_update ? _p('post.updated') : _p('post.created')
+            i.fa-fw.post-meta-icon(class=date_icon)
+            span.post-meta-label= date_title
+            time(datetime=date_xml(page[date_type]) title=date_title + ' ' + full_date(page[date_type]))=date(page[date_type], config.date_format)
+      if theme.post_meta.post.categories && page.categories && page.categories.data.length > 0
+        span.post-meta-categories
+          if theme.post_meta.post.date_type
+            span.post-meta-separator |
+          each item, index in page.categories.data
+            svg.meta_icon.meta_icon--sm.post-meta-icon
+              use(xlink:href='#icon-biaoqian')
+            a(href=url_for(item.path)).post-meta-categories #[=item.name]
+            if index < page.categories.data.length - 1
+              i.fas.fa-angle-right.post-meta-separator
+
+    .meta-secondline
+      - let postWordcount = theme.wordcount.enable && (theme.wordcount.post_wordcount || theme.wordcount.min2read)
+      if postWordcount
+        span.post-meta-separator |
+        span.post-meta-wordcount
+          if theme.wordcount.post_wordcount
+            svg.meta_icon.meta_icon--xl.post-meta-icon
+              use(xlink:href='#icon-charuword')
+            span.post-meta-label= _p('post.wordcount') + ':'
+            span.word-count= wordcount(page.content)
+            if theme.wordcount.min2read
+              span.post-meta-separator |
+          if theme.wordcount.min2read
+            svg.meta_icon.meta_icon--md.post-meta-icon
+              use(xlink:href='#icon-shizhong')
+            span.post-meta-label= _p('post.min2read') + ':'
+            span= min2read(page.content, {cn: 350, en: 160}) + _p('post.min2read_unit')
+
+      mixin pvBlock(parent_id,parent_class,parent_title)
+        span.post-meta-separator |
+        span(class=parent_class id=parent_id data-flag-title=page.title)
+          svg.meta_icon.meta_icon--xl.post-meta-icon
+            use(xlink:href='#icon-eye')
+          span.post-meta-label=_p('post.page_pv') + ':'
+          if block
+            block
+
+      - const commentUse = comments.use
+      if page.comments !== false && commentUse && !comments.lazyload
+        if commentUse[0] === 'Twikoo' && theme.twikoo.visitor
+          +pvBlock('','','')
+            span#twikoo_visitors
+              i.fa-solid.fa-spinner.fa-spin
+        else if theme.busuanzi.page_pv
+          +pvBlock('','post-meta-pv-cv','')
+            span#busuanzi_value_page_pv
+              i.fa-solid.fa-spinner.fa-spin
+      else if theme.busuanzi.page_pv
+        +pvBlock('','post-meta-pv-cv','')
+          span#busuanzi_value_page_pv
+            i.fa-solid.fa-spinner.fa-spin
+
+      if comments.count && !comments.lazyload && page.comments !== false && comments.use
+        - var whichCount = comments.use[0]
+
+        mixin countBlock
+          span.post-meta-separator |
+          span.post-meta-commentcount
+            svg.meta_icon.meta_icon--lg.post-meta-icon
+              use(xlink:href='#icon-pinglun1')
+            span.post-meta-label= _p('post.comments') + ':'
+            if block
+              block
+
+        case whichCount
+          when 'Twikoo'
+            +countBlock
+              a(href=url_for(page.path) + '#post-comment')
+                span#twikoo-count
+                  i.fa-solid.fa-spinner.fa-spin

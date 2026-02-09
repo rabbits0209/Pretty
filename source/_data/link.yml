@@ -1,0 +1,107 @@
+- class_name: 0.推荐网站🍔
+  class_desc: 这里是最熟悉的小伙伴或者赞助商，当然是最前排啦
+  link_list: 
+    - name: 兔兔博客🇨🇳
+      link: https://blog.xn--eet944d.top/
+      avatar: https://tutublog.eu.org/file/1763260619100_Image_1759321330220.jpg
+      descr: 万事都要全力以赴，包括开心
+      siteshot: https://tutublog.eu.org/file/Jg8rwtyZ.jpg
+
+    - name: Fomalhaut🥝
+      link: https://www.fomal.cc/
+      avatar: https://www.fomal.cc/assets/avatar.webp
+      descr: Future is now 🍭🍭🍭
+      siteshot: https://source.fomal.cc/siteshot/www.fomal.cc.webp
+
+- class_name: 2.宝藏网站🔮
+  class_desc: 分享快乐，连接世界，走过一段路，愿我们永远相伴。
+  link_list: 
+    - name: 酩酊街
+      link: https://cafe.omoi.fun/
+      avatar: https://cdn.bonjour.bio/11493/2024-11-11_21-35-32.jpeg
+      siteshot: https://tutublog.eu.org/file/nGGNqzet.jpg
+      descr: 不说话，装高手。
+      
+    - name: 空巷
+      link: https://www.kxyr.top/
+      avatar: https://www.kxyr.top/assets/img/logo.jpg
+      siteshot: https://www.kxyr.top/assets/img/siteshot.png
+      descr: 万人空巷
+
+    - name: No22
+      link: https://blog.no22.top/
+      avatar: https://no22.top/static/img/avatar.png
+      siteshot: https://tutublog.eu.org/file/AqYHVRzh.jpg
+      descr: Have a try!
+    
+    - name: 浪海导航
+      link: https://www.langhai.net/
+      avatar: https://www.langhai.net/assets/images/langhai-logo.png
+      siteshot: https://tutublog.eu.org/file/QqcdPb4T.jpg
+      descr: 浪海导航 ~ 收录各种类型的博客
+
+    - name: 喵喵博客志
+      link: https://www.mmbkz.cn/
+      avatar: https://cdn.helingqi.com/avatar/90d65b07462dd2b0cb32ba3e3187759d?s=200&r=&d=404
+      siteshot: https://tutublog.eu.org/file/tumHwGML.jpg
+      descr: 记录喵喵美好生活
+      
+    - name: 無名小栈
+      descr: 分享技术与科技生活
+      link: https://blog.imsyy.top/
+      avatar: https://pic.imgdb.cn/item/65bc52b0871b83018a06699d.png
+      siteshot: https://pic.imgdb.cn/item/65dc47009f345e8d030b65ba.png
+      
+    - name: 朽丘秋雨
+      descr: 一定会和喜欢的人在夏日夜晚牵手慢步
+      link: https://koxiuqiu.cn
+      avatar: https://tutublog.eu.org/file/fU8a827e.png
+      siteshot: https://tutublog.eu.org/file/zanhmz3A.png
+
+    - name: XingJiのBlog
+      link: https://love.xingji.fun/
+      avatar: https://i.p-i.vip/47/20240920-66ed7b168c38c.jpg
+      descr: 迄今所有人生都大写着失败，但不妨碍我继续向前✨
+      siteshot: https://i.p-i.vip/47/20240920-66ed7b6730ca9.png
+
+    - name: GTX690战术核显卡导弹的猫窝
+      link: https://nekopara.uk
+      avatar: https://logo.nekopara.uk/logo.jpg
+      descr: 一个过气UP的博客，喜欢计算机技术，希望交个朋友
+      siteshot: https://tutublog.eu.org/file/tumHwGML.jpg
+
+    - name: 小霜南风
+      link: https://blog.viper3.top/
+      avatar: https://tutublog.eu.org/file/73CNEfOV.jpg
+      descr: 散落一些碎花，凝结一些轻痕
+      siteshot: https://tutublog.eu.org/file/vAOA4OsD.png
+
+    - name: KASUIEの次元
+      link: https://kasuie.cc
+      avatar: https://kasuie.cc/avatar.webp
+      descr: 喜欢温柔的人
+      siteshot: https://tutublog.eu.org/file/JoALjxLG.png
+
+    - name: Ariasakaの小窝
+      link: https://blog.yaria.top
+      avatar: https://img.0v0.my/2024/12/05/67517bcf104da.png
+      descr: 人有悲欢离合 月有阴晴圆缺
+      siteshot: https://img.0v0.my/2024/09/19/66ec130ad1de0.png
+
+    - name: bbb-lsy07
+      link: https://blog.6uu.us/
+      avatar: https://images.6uu.us/20250511114301488.JPG
+      descr: 科技激荡人文，洞见智慧本真。
+      siteshot: https://img.z4a.net/images/2025/02/16/2025-02-16-14.08.18.png
+
+    - name: 傲雪の
+      link: https://b.oxue.de 
+      avatar: https://avatars.githubusercontent.com/u/155360005
+      descr: 无聊的一天搭配神经的我～
+      siteshot: https://tutublog.eu.org/file/ooG8bF9A.jpg
+
+    - name: 梅之夏
+      link: https://blog.mcenahle.org.cn
+      avatar: https://blog.mcenahle.org.cn/favicon.ico
+      descr: Explore. Dream. Discover.
+      siteshot: https://tutublog.eu.org/file/8FKwAOtq.jpg

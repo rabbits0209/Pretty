@@ -1,0 +1,51 @@
+pjax:
+  name: pjax
+  file: pjax.min.js
+  version: 0.2.8
+twikoo:
+  name: twikoo
+  file: dist/twikoo.all.min.js
+  version: 1.5.11
+mathjax:
+  name: mathjax
+  file: es5/tex-mml-chtml.js
+  version: 3.2.2
+activate_power_mode:
+  name: butterfly-extsrc
+  file: dist/activate-power-mode.min.js
+  version: 1.1.3
+lazyload:
+  name: vanilla-lazyload
+  file: dist/lazyload.iife.min.js
+  version: 17.3.1
+instantpage:
+  name: instant.page
+  file: instantpage.js
+  version: 5.1.0
+typed:
+  name: typed.js
+  file: lib/typed.min.js
+  version: 2.0.12
+fancybox_css_v4:
+  name: '@fancyapps/ui'
+  file: dist/fancybox.css
+  version: 4.0.27
+  other_name: fancyapps-ui
+fancybox_v4:
+  name: '@fancyapps/ui'
+  file: dist/fancybox.umd.js
+  version: 4.0.27
+  other_name: fancyapps-ui
+fontawesomeV6:
+  name: '@fortawesome/fontawesome-free'
+  file: css/all.min.css
+  other_name: font-awesome
+  version: 6.1.1
+flickr_justified_gallery_js:
+  name: flickr-justified-gallery
+  file: dist/fjGallery.min.js
+  version: 2.1.2
+flickr_justified_gallery_css:
+  name: flickr-justified-gallery
+  file: dist/fjGallery.css
+  version: 2.1.2
