@@ -44,6 +44,14 @@ script.
       item.parentNode.replaceChild(newScript, item)
     })
 
+    // 修复 busuanzi 在 pjax 环境下浏览量不更新的问题
+    if (typeof bszCaller !== 'undefined' && typeof bszTag !== 'undefined') {
+      bszCaller.fetch('//busuanzi.ibruce.info/busuanzi?jsonpCallback=BusuanziCallback', function(data) {
+        bszTag.texts(data)
+        bszTag.shows()
+      })
+    }
+
     GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
 
     typeof preloader === 'object' && preloader.endLoading()
