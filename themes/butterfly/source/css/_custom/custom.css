@@ -358,6 +358,11 @@ h1::before, h2::before, h3::before, h4::before, h5::before, h6::before {
 .twikoo .tk-comments-container > .tk-comment { overflow: visible; }
 .twikoo .tk-comments-container > .tk-comment:has(.tk-submit) { z-index: 10; }
 
+/* Twikoo 管理面板层级修复 */
+.tk-admin-container, .tk-admin { z-index: 9999 !important; position: relative; }
+.el-dialog__wrapper { z-index: 9999 !important; }
+.v-modal { z-index: 9998 !important; }
+
 .twikoo .tk-extra {
   border-radius: 8px; background: var(--tk-pink-light);
   padding: 3px 8px; margin-bottom: 0.5rem; font-size: 12px;
